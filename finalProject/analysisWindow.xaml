@@ -1,0 +1,34 @@
+﻿<Window x:Class="finalProject.analysisWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:finalProject"
+        mc:Ignorable="d"
+        Title="analysisWindow" Height="450" Width="800">
+    <Grid>
+        <ListBox
+  Style="{StaticResource MaterialDesignChoiceChipListBox}"
+  x:Name="filterBy" Margin="82,82,414,275">
+            <ListBoxItem
+    Content="Item" IsSelected="True" />
+            <ListBoxItem
+    Content="Shop" />
+            <ListBoxItem
+    Content="Category" />
+            <ListBoxItem
+    Content="Cost" />
+        </ListBox>
+        <ListBox
+  Style="{StaticResource MaterialDesignChoiceChipListBox}"
+  x:Name="TimeBy" Margin="419,82,159,275">
+            <ListBoxItem
+    Content="Day" IsSelected="True" />
+            <ListBoxItem
+    Content="Week" />
+            <ListBoxItem
+    Content="Month" />
+        </ListBox>
+        <local:UserControlMenu x:Name="menu" />
+    </Grid>
+</Window>

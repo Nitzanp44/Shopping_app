@@ -1,0 +1,70 @@
+﻿<Window x:Class="finalProject.editWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:finalProject"
+        mc:Ignorable="d"
+        Title="editWindow" Height="450" Width="800">
+    <Grid>
+        <Grid x:Name="loading" Margin="115,39,115,141" Visibility="Visible">
+            <ProgressBar
+  IsIndeterminate="True" Margin="106,179,107,49" Height="Auto" />
+            <TextBlock HorizontalAlignment="Center" Margin="38,118,55,0" TextWrapping="Wrap" Text="Loading shopping..." VerticalAlignment="Top" Height="56" Width="469" FontSize="28" TextAlignment="Center"/>
+        </Grid>
+        <Grid x:Name="shoplist" Visibility="Hidden">
+
+            <ListBox Margin="127,117,84,94" >
+                <TextBlock Text="Plain" />
+                <TextBlock Text="Old" />
+                <TextBlock Text="ListBox" />
+                <TextBlock Text="Full of junk" />
+            </ListBox>
+            <TextBlock HorizontalAlignment="Left" Margin="105,73,0,0" TextWrapping="Wrap" Text="Select shopping to edit:" VerticalAlignment="Top" Height="52" Width="273" FontSize="24"/>
+        </Grid>
+        <Grid x:Name="itemlist" Margin="32,98,46,34" Visibility="Hidden">
+            <ListView
+  ItemsSource="{Binding Items1}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn
+        DisplayMemberBinding="{Binding Code}"
+        Header="Code" />
+                        <GridViewColumn
+        DisplayMemberBinding="{Binding Name}"
+        Header="Name" />
+                        <GridViewColumn
+        DisplayMemberBinding="{Binding Description}"
+        Header="Description" />
+                        <GridViewColumn
+        Header="Options">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <ComboBox
+              Width="100">
+                                        <ComboBoxItem
+                Content="Test" />
+                                        <ComboBoxItem
+                Content="Test2" />
+                                        <ComboBoxItem
+                Content="Test3" />
+                                    </ComboBox>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <materialDesign:ColorZone
+        Mode="PrimaryMid"
+        Effect="{DynamicResource MaterialDesignShadowDepth5}" Margin="515,231,0,0" Height="53">
+                <Button x:Name="saveEdit"
+          Margin="16"
+          Content="Save"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Click="saveEdit_Click" />
+            </materialDesign:ColorZone>
+        </Grid>
+
+        <local:UserControlMenu x:Name="menu" />
+    </Grid>
+</Window>
