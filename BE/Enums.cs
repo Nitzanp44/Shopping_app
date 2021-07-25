@@ -4,8 +4,8 @@ using System.Text;
 
 namespace BE
 {
-    public class categories
+    public class Enums
     {
-        public enum 
+         public enum categories {   }
     }
 }
