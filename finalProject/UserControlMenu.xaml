@@ -5,23 +5,24 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:finalProject"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"  
              d:DesignHeight="450" d:DesignWidth="800">
+
     <Grid>
-        <Grid>
-        <StackPanel
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="430" Margin="-61,10,607,10" Width="254" >
+            <StackPanel
                Margin="29,22,0,356"
-    Orientation="Horizontal">
-            <ToggleButton
+    Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <ToggleButton
       Style="{DynamicResource MaterialDesignHamburgerToggleButton}" Click="ToggleButton_Click"/>
-            <TextBlock
+                <TextBlock
       VerticalAlignment="Center"
-      Text="Material Design In XAML Toolkit" />
-        </StackPanel>
+      Text="Menu" />
+            </StackPanel>
         </Grid>
-        <Grid x:Name="openMenu" Margin="14,72,495,73" Visibility="Hidden">
-            <Menu x:Name="menu"
-  IsMainMenu="False" Margin="0,0,-29,-65">
+        <Grid x:Name="openMenu" Margin="14,72,0,73" Visibility="Hidden" Background="AntiqueWhite">
+            <Menu x:Name="menu" Background="AntiqueWhite"
+  IsMainMenu="False" Margin="0,0,-104,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="395">
 
                 <MenuItem Name="home"
       Header="Home"
@@ -38,7 +39,7 @@
                 <MenuItem
       Header="Creating a new shopping list" Name="list"
       Icon="{materialDesign:PackIcon Kind=CartArrowUp}" Click="list_Click" Width="722"></MenuItem>
-                
+
                 <MenuItem
       Header="Exit" x:Name="exit"
       Icon="{materialDesign:PackIcon Kind=ExitToApp}" Click="exit_Click" />

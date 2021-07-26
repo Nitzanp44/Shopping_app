@@ -6,11 +6,12 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:finalProject"
         mc:Ignorable="d"
+        Style="{StaticResource BasicStyle}"
         Title="reccomenderWindow" Height="450" Width="800">
     <Grid>
-        <Grid x:Name="loadingRec" Margin="115,39,115,141" Visibility="Visible">
+        <Grid x:Name="loadingRec" Margin="115,39,115,31" Visibility="Visible">
             <ProgressBar
-  IsIndeterminate="True" Margin="125,179,132,49" Height="Auto" />
+  IsIndeterminate="True" Margin="106,179,107,148" Height="Auto"/>
             <TextBlock HorizontalAlignment="Center" Margin="38,118,55,0" TextWrapping="Wrap" Text="Creates list..." VerticalAlignment="Top" Height="56" Width="469" FontSize="28" TextAlignment="Center"/>
         </Grid>
         <Grid x:Name="shopListRec" Visibility="Hidden">

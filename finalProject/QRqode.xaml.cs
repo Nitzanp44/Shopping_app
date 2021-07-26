@@ -90,5 +90,9 @@ namespace finalProject
             this.Close();
         }
 
+        private void addItem_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

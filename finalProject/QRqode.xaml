@@ -12,6 +12,7 @@
         TextOptions.TextFormattingMode="Ideal"
         TextOptions.TextRenderingMode="Auto"
         FontFamily="{DynamicResource MaterialDesignFont}"
+        Style="{StaticResource BasicStyle}"
         Title="QRqode" Height="450" Width="800">
     <Grid x:Name="Shopping">
         <Border
@@ -26,8 +27,8 @@
                     <RowDefinition
           Height="Auto" />
                 </Grid.RowDefinitions>
-                <ListBox BorderThickness="2" BorderBrush="Aqua"
-        x:Name="FruitListBox" Margin="150,42,150,90">
+                <ListBox
+        x:Name="FruitListBox" BorderThickness="2" Margin="150,56,150,76">
                     <ListBoxItem
           Content="Apple" />
                     <ListBoxItem
@@ -35,31 +36,27 @@
                     <ListBoxItem
           Content="Pear" />
                 </ListBox>
-                <materialDesign:ColorZone
-        Mode="PrimaryMid"
-        Effect="{DynamicResource MaterialDesignShadowDepth5}" Margin="150,326,150,20">
-                    <Button x:Name="finisfShopping"
-          Margin="16"
-          Content="Done!" Click="finisfShopping_Click" />
-                </materialDesign:ColorZone>
-                <Button x:Name="addItem"
+
+                <Button x:Name="finisfShopping" Style="{StaticResource ButtonStyle}"
+          Margin="150,310,150,41"
+          Content="Done!" Click="finisfShopping_Click" Height="Auto" />
+                <Button x:Name="addItem" Background="#FF6EA41B" IsEnabled="True"
         Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"
         Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"
         VerticalAlignment="Bottom"
         HorizontalAlignment="Right"
-        Grid.Row="0"
         Margin="0,0,174,111"
-        Content="{materialDesign:PackIcon Kind=Plus, Size=32}" Click="addItem_Click" RenderTransformOrigin="-2.938,-0.388" Height="49" Width="49" />
+        Content="{materialDesign:PackIcon Kind=Plus, Size=32}" Click="addItem_Click" RenderTransformOrigin="-2.938,-0.388" Height="58" Width="70" />
             </Grid>
         </Border>
         <local:UserControlMenu x:Name="menu"/>
-        <Grid x:Name="finish" Margin="204,88,204,157" Visibility="Hidden">
-            <materialDesign:ColorZone
+        <Grid x:Name="finish" Margin="156,88,156,157" Visibility="Hidden">
+            <!--<materialDesign:ColorZone
         Mode="PrimaryMid"
-        Effect="{DynamicResource MaterialDesignShadowDepth5}" Height="37" Margin="130,127,131,0">
-                <Button x:Name="okfinisfShopping"
-          Content="ok" Margin="10,-2,-17,0" HorizontalAlignment="Center" VerticalAlignment="Center" Height="39" Width="130" Click="okfinisfShopping_Click" FontSize="22"/>
-            </materialDesign:ColorZone>
+        Effect="{DynamicResource MaterialDesignShadowDepth5}" Height="40" Margin="130,124,131,0">-->
+            <Button x:Name="okfinisfShopping" Style="{StaticResource ButtonStyle}"
+          Content="ok" Margin="172,115,170,13" HorizontalAlignment="Center" VerticalAlignment="Center" Height="38" Width="130" Click="okfinisfShopping_Click" FontSize="22"/>
+            <!--</materialDesign:ColorZone>-->
             <TextBlock HorizontalAlignment="Center" FontSize="20" VerticalAlignment="Center" Height="56" Margin="2,54,2,64" FontWeight="Bold" TextAlignment="Center" ><Run Text="The process was completed "/><LineBreak/><Run Text="successfully!"/></TextBlock>
         </Grid>
     </Grid>

@@ -11,39 +11,40 @@
         TextOptions.TextFormattingMode="Ideal"
         TextOptions.TextRenderingMode="Auto"
         FontFamily="{DynamicResource MaterialDesignFont}"
+        Style="{StaticResource BasicStyle}"
         Title="MainWindow" Height="450" Width="800">
-    <Grid Background="Linen">
+   
+    <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition />            <ColumnDefinition />            <ColumnDefinition />            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Button x:Name="newShop" Grid.Column="0"
-    Style="{StaticResource MaterialDesignRaisedDarkButton}"
+    Style="{StaticResource ButtonStyle}"
     Height="Auto"
-    ToolTip="MaterialDesignRaisedDarkButton with Round Corners"
     IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Margin="19,178,19,173" Click="newShop_Click">
             <TextBlock
       Text="New Shopping" />
         </Button>
         <Button x:Name="editShop" Grid.Column="1"
-    Style="{StaticResource MaterialDesignRaisedDarkButton}"
+    Style="{StaticResource ButtonStyle}"
     Height="Auto"
-    ToolTip="MaterialDesignRaisedDarkButton with Round Corners"
     IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Margin="19,178,19,173" Click="editShop_Click">
             <TextBlock
       Text="Edit Shopping" />
         </Button>
         <Button x:Name="viewShop" Grid.Column="2"
-    Style="{StaticResource MaterialDesignRaisedDarkButton}"
+    Style="{StaticResource ButtonStyle}"
     Height="Auto"
-    ToolTip="MaterialDesignRaisedDarkButton with Round Corners"
     IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Margin="19,178,19,173" Click="viewShop_Click">
             <TextBlock
       Text="Analysis Shopping" />
         </Button>
         <Button x:Name="recShop" Grid.Column="3"
-    Style="{StaticResource MaterialDesignRaisedDarkButton}"
+    Style="{StaticResource ButtonStyle}"
     Height="Auto"
-    ToolTip="MaterialDesignRaisedDarkButton with Round Corners"
     IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Margin="19,178,19,173" Click="recShop_Click">
             <TextBlock
       Text="Build me shopping" />
