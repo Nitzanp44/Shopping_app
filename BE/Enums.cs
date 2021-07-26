@@ -6,6 +6,6 @@ namespace BE
 {
     public class Enums
     {
-         public enum categories {   }
+         public enum categories {Food, Clothing, Communications, Housekeeping, Appliances, Pharm, Other}
     }
 }
