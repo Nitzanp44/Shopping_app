@@ -27,10 +27,19 @@ namespace finalProject
 
         private void ToggleButton_Click(object sender, RoutedEventArgs e)
         {
+            var myWindow = Window.GetWindow(this);
             if (openMenu.Visibility == Visibility.Visible)
+            {
+                
                 openMenu.Visibility = Visibility.Hidden;
+            }
             else
+            {
+
                 openMenu.Visibility = Visibility.Visible;
+            }
+
+            
         }
 
         private void home_Click(object sender, RoutedEventArgs e)

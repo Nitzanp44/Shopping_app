@@ -3,8 +3,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Style x:Key="BasicStyle" TargetType="Window">
         <Setter Property="Background" Value="Bisque"/>
-        <Setter Property="BorderBrush" Value="LightSalmon"/>
-        <Setter Property="BorderThickness" Value="3"/>
+        
     </Style>
 
 </ResourceDictionary>

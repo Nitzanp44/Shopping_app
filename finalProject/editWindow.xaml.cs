@@ -13,8 +13,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 
-
-
 namespace finalProject
 {
     /// <summary>
@@ -36,17 +34,10 @@ namespace finalProject
             timer.Start();
         }
 
-
         private void saveEdit_Click(object sender, RoutedEventArgs e)
         {
             itemlist.Visibility = Visibility.Hidden;
             shoplist.Visibility = Visibility.Visible;
         }
     }
-
-
-
-
-
-
 }

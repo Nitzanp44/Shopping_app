@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:finalProject"
         mc:Ignorable="d"
+        Style="{StaticResource BasicStyle}"
         Title="analysisWindow" Height="450" Width="800">
     <Grid>
         <ListBox
